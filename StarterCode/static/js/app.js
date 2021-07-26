@@ -36,23 +36,18 @@ function build_chart(id) {
             let samples = data.samples;
 
             // Filter name and other arrays for id
-            let idMetadata = metadata.filter(participant=>participant.id)[0];
+            let idMetadata = metadata.filter(participant => participant.id)[0];
             console.log(idMetadata);
-            Object.entries(idMetadata).forEach(([key,value])=>{
-                var list = samples.append('ul');
-                list.attr('class', 'list-group list-group-flush')
-                var item = list.append('li');
-
-                item.attr('class', 'list-group-item p-1 demo-text bg-transpaent');
-
-                item.text(`${key}: ${value}`);
-            }
-            )
-
-            //         var idMetadata = data.metadata.filter(participant => participant.id == id)[0];
-            //         console.log(idMetadata)
-            //         // build the chart
-
-        });
-    }
-
+            // Object.entries(idMetadata).forEach(([key,value])=>{
+            //     var list = samples.append('ul');
+            //     list.attr('class', 'list-group list-group-flush')
+            //     var item = list.append('li');
+            //     item.attr('class', 'list-group-item p-1 demo-text bg-transpaent');
+            //     item.text(`${key}: ${value}`);
+            let results = idMetadata[0];
+            var metaPanel = d3.select(samples);
+            metaPanel.html('');
+            Object.entries(results).forEach(([key, value]) => {
+                metaPanel.append('h6').text(`${key.toUpperCase()}: ${value}`)
+            })
+        })}
