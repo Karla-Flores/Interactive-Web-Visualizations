@@ -38,16 +38,11 @@ function build_chart(id) {
             // Filter name and other arrays for id
             let idMetadata = metadata.filter(participant => participant.id)[0];
             console.log(idMetadata);
-            // Object.entries(idMetadata).forEach(([key,value])=>{
-            //     var list = samples.append('ul');
-            //     list.attr('class', 'list-group list-group-flush')
-            //     var item = list.append('li');
-            //     item.attr('class', 'list-group-item p-1 demo-text bg-transpaent');
-            //     item.text(`${key}: ${value}`);
-            let results = idMetadata[0];
-            var metaPanel = d3.select(samples);
+            // Build metaPanel for id sample-metadata
+            let metaPanel = d3.select('#sample-metadata');
             metaPanel.html('');
-            Object.entries(results).forEach(([key, value]) => {
-                metaPanel.append('h6').text(`${key.toUpperCase()}: ${value}`)
-            })
-        })}
+            Object.entries(idMetadata).forEach(([key, value]) => {
+                metaPanel.append('h6').text(`${key.toUpperCase()}: ${value}`);
+            });
+        });
+};
