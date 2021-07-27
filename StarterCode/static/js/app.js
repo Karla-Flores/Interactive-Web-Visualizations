@@ -27,7 +27,10 @@ function load_dropdown_list(names) {
     })
 };
 
-
+// Linking id selected on dropdown with function
+function optionChanged (id) {
+    build_chart(id);
+}
 
 // Build a chart for a single sample such as 940
 function build_chart(id) {
@@ -44,7 +47,7 @@ function build_chart(id) {
             otu_ids = samples.otu_ids;
             otu_labels = samples.otu_labels;
             sample_values = samples.sample_values;
-            //
+            // Verifying filter and variables 
             console.log(samples);
             console.log(metadata);
             console.log(otu_ids);
@@ -56,6 +59,7 @@ function build_chart(id) {
             Object.entries(metadata).forEach(([key, value]) => {
                 metaPanel.append('h6').text(`${key.toUpperCase()}: ${value}`);
             });
+            // Creatin arrays
             let topotu_ids= otu_ids.slice(0,10).reverse();
             let topotu_labels= otu_labels.slice(0,10).reverse();
             let topsample_values= sample_values.slice(0,10).reverse();
@@ -65,7 +69,5 @@ function build_chart(id) {
         });
 };
 
-function optionChanged (id) {
-    build_chart(id);
-}
+
 
