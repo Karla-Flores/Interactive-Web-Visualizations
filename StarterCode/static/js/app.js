@@ -56,6 +56,7 @@ function build_chart(id) {
             // Build metaPanel for id sample-metadata
             let metaPanel = d3.select('#sample-metadata');
             metaPanel.html('');
+            // Loop for each id and information in the #sample-metadata box
             Object.entries(metadata).forEach(([key, value]) => {
                 metaPanel.append('h6').text(`${key.toUpperCase()}: ${value}`);
             });
@@ -67,6 +68,8 @@ function build_chart(id) {
             console.log(topotu_ids)
             console.log(topotu_labels)
             console.log(topsample_values)
+//
+
         });
 };
 
