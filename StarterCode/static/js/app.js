@@ -48,17 +48,17 @@ function build_chart(id) {
             otu_labels = samples.otu_labels;
             sample_values = samples.sample_values;
             // Verifying filter and variables 
-            console.log(samples);
-            console.log(metadata);
-            console.log(otu_ids);
-            console.log(otu_labels);
-            console.log(sample_values);
+                console.log(samples);
+                console.log(metadata);
+                console.log(otu_ids);
+                console.log(otu_labels);
+                console.log(sample_values);
             // Build metaPanel for id sample-metadata
             let metaPanel = d3.select('#sample-metadata');
             metaPanel.html('');
             // Loop for each id and information in the #sample-metadata box
             Object.entries(metadata).forEach(([key, value]) => {
-                metaPanel.append('h6').text(`${key.toUpperCase()}: ${value}`);
+                metaPanel.append('h6').text(`${key.toUpperCase() }: ${value}`);
             });
             // Creating top 10 arrays
             let topotu_ids= otu_ids.slice(0,10).reverse();
@@ -74,7 +74,7 @@ function build_chart(id) {
             // Creating a trace
             var traceBar = {
                 x: topsample_values,
-                y: topotu_id_labels,
+                y: topotu_id_labels ,
                 type: 'bar',
                 orientation: 'h',
                 marker: {
