@@ -13,6 +13,7 @@ function init(data) {
     build_chart('id');
 };
 
+
 // Dropdown menu with Ids
 function load_dropdown_list(names) {
     let dropdown = document.getElementById('selDataset');
@@ -26,6 +27,8 @@ function load_dropdown_list(names) {
     })
 };
 
+
+
 // Build a chart for a single sample such as 940
 function build_chart(id) {
     console.log('build_chartfor' + id);
@@ -34,9 +37,9 @@ function build_chart(id) {
             let names = data.names;
             let metadata = data.metadata;
             let samples = data.samples;
-
             // Filter name and other arrays for id
-            let idMetadata = metadata.filter(participant => participant.id)[0];
+            // let idMetadata = metadata.filter(participant => participant.id)[0];
+            let idMetadata = metadata.filter(participant => participant.id == id)[0]
             console.log(idMetadata);
             // Build metaPanel for id sample-metadata
             let metaPanel = d3.select('#sample-metadata');
@@ -46,3 +49,4 @@ function build_chart(id) {
             });
         });
 };
+
