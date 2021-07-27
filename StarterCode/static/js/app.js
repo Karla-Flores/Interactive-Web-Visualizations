@@ -72,7 +72,7 @@ function build_chart(id) {
             console.log(topotu_labels)
             console.log(topsample_values)
             // Creating a trace
-            let traceBar = {
+            var traceBar = {
                 x: topotu_labels,
                 y: topotu_ids,
                 type: 'bar',
@@ -81,8 +81,9 @@ function build_chart(id) {
                     color: 'coral'
                 }
             }
+            var traceBar = [traceBar]
             // Placing the bar chart into the 'bar' div
-            Plotly.newPlot('bar');
+            Plotly.newPlot('bar', traceBar);
         });
 };
 
