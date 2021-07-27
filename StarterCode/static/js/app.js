@@ -64,6 +64,9 @@ function build_chart(id) {
             let topotu_ids= otu_ids.slice(0,10).reverse();
             let topotu_labels= otu_labels.slice(0,10).reverse();
             let topsample_values= sample_values.slice(0,10).reverse();
+            // Map function to store the Ids adding OTU for labeling
+            let topotu_id_labels = topotu_ids.map(otu_ids=> 'OTU ' + otu_ids)
+            console.log(topotu_id_labels)
             // Verifying top 10 arrays
             console.log(topotu_ids)
             console.log(topotu_labels)
@@ -78,6 +81,8 @@ function build_chart(id) {
                     color: 'coral'
                 }
             }
+            // Placing the bar chart into the 'bar' div
+            Plotly.newPlot('bar');
         });
 };
 
