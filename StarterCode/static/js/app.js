@@ -10,7 +10,7 @@ function init(data) {
     console.log(data.metadata);
     console.log(data.samples);
     load_dropdown_list(data.names);
-    build_chart('id');
+    build_chart('940');
 };
 
 
@@ -38,15 +38,34 @@ function build_chart(id) {
             let metadata = data.metadata;
             let samples = data.samples;
             // Filter name and other arrays for id
-            // let idMetadata = metadata.filter(participant => participant.id)[0];
-            let idMetadata = metadata.filter(participant => participant.id == id)[0]
-            console.log(idMetadata);
+            metadata = metadata.filter(participant => participant.id == id)[0];
+            samples = samples.filter(participant=> participant.id == id)[0];
+            // Creating variables for arrays 
+            otu_ids = samples.otu_ids;
+            otu_labels = samples.otu_labels;
+            sample_values = samples.sample_values;
+            //
+            console.log(samples);
+            console.log(metadata);
+            console.log(otu_ids);
+            console.log(otu_labels);
+            console.log(sample_values);
             // Build metaPanel for id sample-metadata
             let metaPanel = d3.select('#sample-metadata');
             metaPanel.html('');
-            Object.entries(idMetadata).forEach(([key, value]) => {
+            Object.entries(metadata).forEach(([key, value]) => {
                 metaPanel.append('h6').text(`${key.toUpperCase()}: ${value}`);
             });
+            let topotu_ids= otu_ids.slice(0,10).reverse();
+            let topotu_labels= otu_labels.slice(0,10).reverse();
+            let topsample_values= sample_values.slice(0,10).reverse();
+            console.log(topotu_ids)
+            console.log(topotu_labels)
+            console.log(topsample_values)
         });
 };
+
+function optionChanged (id) {
+    build_chart(id);
+}
 
