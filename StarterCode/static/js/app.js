@@ -70,7 +70,13 @@ function build_chart(id) {
             console.log(topsample_values)
             // Creating a trace
             let traceBar = {
-                
+                x: topotu_labels,
+                y: topotu_ids,
+                type: 'bar',
+                orientation: 'h',
+                marker: {
+                    color: 'coral'
+                }
             }
         });
 };
