@@ -59,10 +59,11 @@ function build_chart(id) {
             Object.entries(metadata).forEach(([key, value]) => {
                 metaPanel.append('h6').text(`${key.toUpperCase()}: ${value}`);
             });
-            // Creatin arrays
+            // Creating top 10 arrays
             let topotu_ids= otu_ids.slice(0,10).reverse();
             let topotu_labels= otu_labels.slice(0,10).reverse();
             let topsample_values= sample_values.slice(0,10).reverse();
+            // Verifying top 10 arrays
             console.log(topotu_ids)
             console.log(topotu_labels)
             console.log(topsample_values)
