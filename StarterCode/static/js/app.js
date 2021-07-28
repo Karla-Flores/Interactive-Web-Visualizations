@@ -53,6 +53,7 @@ function build_chart(id) {
             console.log(samples);
             console.log(metadata);
             console.log(otu_ids);
+            console.log(wfreq);
             console.log(otu_labels);
             console.log(sample_values);
             // Build metaPanel for id sample-metadata
@@ -125,7 +126,42 @@ function build_chart(id) {
             }
             // Placing the bar chart into the 'bubble' div
             Plotly.newPlot('bubble', traceBubble, layout_bubble);
+            // Creating a trace for gauge chart
+            var traceGauge = {
+                domain: { x: [0, 1], y: [0, 1] },
+                value: wfreq,
+                type: "indicator",
+                mode: "gauge",
+                gauge: {
+                    axis: {
+                        range: [0, 9],
+                        tickmode: 'linear',
+                        tickfont: {
+                            size: 15
+                        }
+                    },
+                    // Making gauge bar transparent since a pointer is being used instead
 
+                    bar: { color: 'rgba(8,29,88,0)' }, 
+                    
+                    
+                    steps: [
+                        { range: [0, 1], color: '#009a60' },
+                        { range: [1, 2], color: '#4aa84e' },
+                        { range: [2, 3], color: '#92b73a' },
+                        { range: [3, 4], color: '#c6bf22' },
+                        { range: [4, 5], color: '#edbd02' },
+                        { range: [5, 6], color: '#ffad00' },
+                        { range: [6, 7], color: '#ff8c00' },
+                        { range: [7, 8], color: '#fc6114' },
+                        { range: [8, 9], color: '#f43021' },
+                    ]
+                }
+            }
+            // Defining traceBar
+            var traceGauge = [traceGauge];
+            // Placing the bar chart into the 'bubble' div
+            Plotly.newPlot('gauge', traceGauge);
         });
 };
 
