@@ -163,16 +163,20 @@ function build_chart(id) {
                     ]
                 }   
             }
-            // Conditional for wfreq = 0
-            if (wfreq == null) {
-                wfreq = 0;
+            let layoutGauge ={
+                title: {
+                    text: `<b>Test Subject ${id}</b><br><b>Belly Button Washing Frequency</b><br><br>Scrubs per Week`,
+                    font: {
+                        size: 18,
+                }
             }
+        };
 
                 
             // Defining traceBar
             var traceGauge = [traceGauge];
             // Placing the bar chart into the 'bubble' div
-            Plotly.newPlot('gauge', traceGauge);
+            Plotly.newPlot('gauge', traceGauge, layoutGauge);
             
         });
 };
