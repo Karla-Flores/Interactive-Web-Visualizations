@@ -127,6 +127,10 @@ function build_chart(id) {
             // Placing the bar chart into the 'bubble' div
             Plotly.newPlot('bubble', traceBubble, layout_bubble);
             // Creating a trace for gauge chart
+            // Conditional for wfreq = 0
+            if (wfreq == null) {
+                wfreq = 0;
+                        }
             var traceGauge = {
                 domain: { x: [0, 1], y: [0, 1] },
                 value: wfreq,
@@ -157,12 +161,19 @@ function build_chart(id) {
                         { range: [7, 8], color: '#fc6114' },
                         { range: [8, 9], color: '#f43021' },
                     ]
-                }
+                }   
             }
+            // Conditional for wfreq = 0
+            if (wfreq == null) {
+                wfreq = 0;
+            }
+
+                
             // Defining traceBar
             var traceGauge = [traceGauge];
             // Placing the bar chart into the 'bubble' div
             Plotly.newPlot('gauge', traceGauge);
+            
         });
 };
 
