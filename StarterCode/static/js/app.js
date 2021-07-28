@@ -28,7 +28,7 @@ function load_dropdown_list(names) {
 };
 
 // Linking id selected on dropdown with function
-function optionChanged (id) {
+function optionChanged(id) {
     build_chart(id);
 }
 
@@ -42,30 +42,32 @@ function build_chart(id) {
             let samples = data.samples;
             // Filter name and other arrays for id
             metadata = metadata.filter(participant => participant.id == id)[0];
-            samples = samples.filter(participant=> participant.id == id)[0];
+            samples = samples.filter(participant => participant.id == id)[0];
             // Creating variables for arrays 
             otu_ids = samples.otu_ids;
             otu_labels = samples.otu_labels;
             sample_values = samples.sample_values;
+            // Wash frequency
+            let wfreq = metadata.wfreq;
             // Verifying filter and variables 
-                console.log(samples);
-                console.log(metadata);
-                console.log(otu_ids);
-                console.log(otu_labels);
-                console.log(sample_values);
+            console.log(samples);
+            console.log(metadata);
+            console.log(otu_ids);
+            console.log(otu_labels);
+            console.log(sample_values);
             // Build metaPanel for id sample-metadata
             let metaPanel = d3.select('#sample-metadata');
             metaPanel.html('');
             // Loop for each id and information in the #sample-metadata box
             Object.entries(metadata).forEach(([key, value]) => {
-                metaPanel.append('h6').text(`${key.toUpperCase() }: ${value}`);
+                metaPanel.append('h6').text(`${key.toUpperCase()}: ${value}`);
             });
             // Creating top 10 arrays
-            let topotu_ids= otu_ids.slice(0,10).reverse();
-            let topotu_labels= otu_labels.slice(0,10).reverse();
-            let topsample_values= sample_values.slice(0,10).reverse();
+            let topotu_ids = otu_ids.slice(0, 10).reverse();
+            let topotu_labels = otu_labels.slice(0, 10).reverse();
+            let topsample_values = sample_values.slice(0, 10).reverse();
             // Map function to store the Ids adding OTU for labeling
-            let topotu_id_labels = topotu_ids.map(otu_ids=> 'OTU ' + otu_ids)
+            let topotu_id_labels = topotu_ids.map(otu_ids => 'OTU ' + otu_ids)
             console.log(topotu_id_labels)
             // Verifying top 10 arrays
             console.log(topotu_ids)
@@ -74,7 +76,7 @@ function build_chart(id) {
             // Creating a trace for bar chart
             var traceBar = {
                 x: topsample_values,
-                y: topotu_id_labels ,
+                y: topotu_id_labels,
                 type: 'bar',
                 orientation: 'h',
                 marker: {
@@ -86,22 +88,23 @@ function build_chart(id) {
                 title: {
                     text: `<b>Top 10 OTU for ID ${(id)}</b>`,
                     font: {
-                        size:16,
+                        size: 16,
                     },
-                height: 500,
-                width: 600
-            }};
+                    height: 500,
+                    width: 600
+                }
+            };
             // Defining traceBar
             var traceBar = [traceBar];
             // Placing the bar chart into the 'bar' div
             Plotly.newPlot('bar', traceBar, layout);
             // Creating a trace for buble chart
             var traceBubble = {
-                x:topotu_ids,
-                y:topsample_values,
+                x: topotu_ids,
+                y: topsample_values,
                 text: topotu_id_labels,
                 mode: 'markers',
-                marker:{
+                marker: {
                     size: topsample_values,
                     color: topotu_ids,
                     colorscale: 'Portland'
@@ -119,10 +122,10 @@ function build_chart(id) {
                     title: "<b>Sample Values</b>",
                     color: 'black'
                 },
-
             }
-            // Placing the bar chart into the 'bar' div
+            // Placing the bar chart into the 'bubble' div
             Plotly.newPlot('bubble', traceBubble, layout_bubble);
+
         });
 };
 
