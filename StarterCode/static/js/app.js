@@ -78,7 +78,7 @@ function build_chart(id) {
                 type: 'bar',
                 orientation: 'h',
                 marker: {
-                    color: 'peru'
+                    color: 'tomato'
                 }
             }
             // Setting layout for title and bar size
@@ -109,8 +109,20 @@ function build_chart(id) {
             }
             // Defining traceBar
             var traceBubble = [traceBubble];
+            // Setting layout for title and bar size
+            let layout_bubble = {
+                xaxis: {
+                    title: '<b>OTU Id</b>',
+                    color: 'black'
+                },
+                yaxis: {
+                    title: "<b>Sample Values</b>",
+                    color: 'black'
+                },
+
+            }
             // Placing the bar chart into the 'bar' div
-            Plotly.newPlot('bubble', traceBubble);
+            Plotly.newPlot('bubble', traceBubble, layout_bubble);
         });
 };
 
