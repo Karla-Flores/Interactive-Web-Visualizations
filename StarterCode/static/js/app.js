@@ -131,7 +131,8 @@ function build_chart(id) {
                 domain: { x: [0, 1], y: [0, 1] },
                 value: wfreq,
                 type: "indicator",
-                mode: "gauge",
+                // mode: "gauge",
+                mode: "gauge+number+delta",
                 gauge: {
                     axis: {
                         range: [0, 9],
@@ -141,10 +142,10 @@ function build_chart(id) {
                         }
                     },
                     // Making gauge bar transparent since a pointer is being used instead
-
-                    bar: { color: 'rgba(8,29,88,0)' }, 
-                    
-                    
+                    // bar: { color: 'rgba(8,29,88,0)' }, 
+                    // Selecting colour
+                    // bar: { color: 'gainsboro' }, 
+                    bar: { color: 'ghostwhite' }, 
                     steps: [
                         { range: [0, 1], color: '#009a60' },
                         { range: [1, 2], color: '#4aa84e' },
