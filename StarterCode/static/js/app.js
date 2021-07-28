@@ -71,7 +71,7 @@ function build_chart(id) {
             console.log(topotu_ids)
             console.log(topotu_labels)
             console.log(topsample_values)
-            // Creating a trace
+            // Creating a trace for bar chart
             var traceBar = {
                 x: topsample_values,
                 y: topotu_id_labels ,
@@ -81,10 +81,32 @@ function build_chart(id) {
                     color: 'coral'
                 }
             }
+            // Setting layout for title and bar size
+            let layout = {
+                title: {
+                    text: `<b>Top 10 OTU for ID ${(id)}</b>`,
+                    font: {
+                        size:16,
+                    },
+                height: 500,
+                width: 600
+            }};
             // Defining traceBar
-            var traceBar = [traceBar]
+            var traceBar = [traceBar];
             // Placing the bar chart into the 'bar' div
-            Plotly.newPlot('bar', traceBar);
+            Plotly.newPlot('bar', traceBar, layout);
+            // Creating a trace for buble chart
+            var traceBubble = {
+                x:topotu_id_labels,
+                y:topsample_values,
+                text: topotu_id_labels,
+                mode: 'markers'
+                
+            }
+            // Defining traceBar
+            var traceBubble = [traceBubble];
+            // Placing the bar chart into the 'bar' div
+               Plotly.newPlot('bubble', traceBubble);
         });
 };
 
