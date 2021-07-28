@@ -78,7 +78,7 @@ function build_chart(id) {
                 type: 'bar',
                 orientation: 'h',
                 marker: {
-                    color: 'coral'
+                    color: 'peru'
                 }
             }
             // Setting layout for title and bar size
@@ -97,16 +97,20 @@ function build_chart(id) {
             Plotly.newPlot('bar', traceBar, layout);
             // Creating a trace for buble chart
             var traceBubble = {
-                x:topotu_id_labels,
+                x:topotu_ids,
                 y:topsample_values,
                 text: topotu_id_labels,
-                mode: 'markers'
-                
+                mode: 'markers',
+                marker:{
+                    size: topsample_values,
+                    color: topotu_ids,
+                    colorscale: 'plotly3'
+                }
             }
             // Defining traceBar
             var traceBubble = [traceBubble];
             // Placing the bar chart into the 'bar' div
-               Plotly.newPlot('bubble', traceBubble);
+            Plotly.newPlot('bubble', traceBubble);
         });
 };
 
