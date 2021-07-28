@@ -104,7 +104,7 @@ function build_chart(id) {
                 marker:{
                     size: topsample_values,
                     color: topotu_ids,
-                    colorscale: 'plotly3'
+                    colorscale: 'Portland'
                 }
             }
             // Defining traceBar
