@@ -115,8 +115,12 @@ function build_chart(id) {
             var traceBubble = [traceBubble];
             // Setting layout for title and bar size
             let layout_bubble = {
+                title: `<b>Bacteria Cultures per Sample ${(id)}<b>`,
+                font: {
+                    size: 14,
+                },
                 xaxis: {
-                    title: '<b>OTU Id</b>',
+                    title: `<b>OTU ${(id)}</b>`,
                     color: 'black'
                 },
                 yaxis: {
@@ -167,12 +171,10 @@ function build_chart(id) {
                 title: {
                     text: `<b>Test Subject ${id}</b><br><b>Belly Button Washing Frequency</b><br><br>Scrubs per Week`,
                     font: {
-                        size: 18,
+                        size: 16,
                 }
             }
         };
-
-                
             // Defining traceBar
             var traceGauge = [traceGauge];
             // Placing the bar chart into the 'bubble' div
