@@ -19,4 +19,5 @@
   <li>Since the task was to only plot the top 10 values, the three arrays were sliced and reversed to display the chart as below.</li>
   <p align = 'center'><img src="https://raw.githubusercontent.com/Karla-Flores/Interactive-Web-Visualizations--Challenge/main/Screenshot/Top_10_OTU_ID.png"></p>
   <li>The entire sample arrays were used to plot a bubble chart referring to bacteria cultures per sample.</li>
+  <p align = 'center'><img src="https://github.com/Karla-Flores/Interactive-Web-Visualizations--Challenge/blob/main/Screenshot/Bacteria_Cultures_Sample.png"></p>
 </ul>
