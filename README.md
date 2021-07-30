@@ -25,4 +25,6 @@
   <li>The default bar indicates the value of wfreq.</li>
     <p align = 'center'><img src="https://github.com/Karla-Flores/Interactive-Web-Visualizations--Challenge/blob/main/Screenshot/Belly_Button_Wfreq.png"></p>
   </ul>  
+  <li>Every time an ID is selected from the dropdown (on change), an optionChanged(this.value) function is called, then the information of the ID is updated.</li>
+  <p align = 'center'><img src=""></p>
 </ul>
