@@ -17,7 +17,6 @@
   <li>Retrieve metadata info for each test subject and display this in the form of an unordered list item as a key-value pair on the dashboard.</li>
   <li>Get required data for plotting, including sample_values, otu_ids, and otu_labels used to create a trace and plot the bar chart.</li>
   <li>Since the task was to only plot the top 10 values, the three arrays were sliced and reversed to display the chart as below.</li>
-  
-
-  <li></li>
+  <p align = 'center'><img src="https://raw.githubusercontent.com/Karla-Flores/Interactive-Web-Visualizations--Challenge/main/Screenshot/Top_10_OTU_ID.png"></p>
+  <li>The entire sample arrays were used to plot a bubble chart referring to bacteria cultures per sample.</li>
 </ul>
