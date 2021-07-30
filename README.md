@@ -26,5 +26,5 @@
     <p align = 'center'><img src="https://github.com/Karla-Flores/Interactive-Web-Visualizations--Challenge/blob/main/Screenshot/Belly_Button_Wfreq.png"></p>
   </ul>  
   <li>Every time an ID is selected from the dropdown (on change), an optionChanged(this.value) function is called, then the information of the ID is updated.</li>
-  <p align = 'center'><img src=""></p>
+  <p align = 'center'><img src="https://github.com/Karla-Flores/Interactive-Web-Visualizations--Challenge/blob/main/Screenshot/Html.png"></p>
 </ul>
