@@ -101,13 +101,16 @@ function build_chart(id) {
             Plotly.newPlot('bar', traceBar, layout);
             // Creating a trace for buble chart
             var traceBubble = {
-                x: topotu_ids,
-                y: topsample_values,
-                text: topotu_id_labels,
+                x: otu_ids,
+                // x: topotu_ids,
+                y: sample_values,
+                // y: topsample_values,
+                text: otu_labels,
+                // text: topotu_id_labels,
                 mode: 'markers',
                 marker: {
-                    size: topsample_values,
-                    color: topotu_ids,
+                    size: sample_values,
+                    color: otu_ids,
                     colorscale: 'Portland'
                 }
             }
@@ -140,7 +143,7 @@ function build_chart(id) {
                 value: wfreq,
                 type: "indicator",
                 // mode: "gauge",
-                mode: "gauge+number+delta",
+                mode: "gauge+number",
                 gauge: {
                     axis: {
                         range: [0, 9],
