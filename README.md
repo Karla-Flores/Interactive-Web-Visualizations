@@ -1,7 +1,7 @@
 <h1> Interactive-Web-Visualizations--Challenge </h1>
 <hr>
 <h3>Background</h3>
-<p align = 'justify'>In this assignment, an interactive dashboard was built to explore the <a href = "http://robdunnlab.com/projects/belly-button-biodiversity/" target="_blank">Belly Button Biodiversity dataset</a>, which catalogs the microbes that colonize human navels in JSON format.</p>
+<p align = 'justify'>In this <a href = 'https://karla-flores.github.io/Interactive-Web-Visualizations--Challenge/'>assignment</a>, an interactive dashboard was built to explore the <a href = "http://robdunnlab.com/projects/belly-button-biodiversity/" target="_blank">Belly Button Biodiversity dataset</a>, which catalogs the microbes that colonize human navels in JSON format.</p>
 
 <p align = 'justify'>The dataset reveals a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study). Demographics information is dynamically populated based upon a user-selected test subject ID. </p>
 
@@ -9,7 +9,7 @@
 <br>
 <h3>Plotly</h3>
 <hr>
-<p align = 'justify'>The task was to retrieve test subject demographics and draw a bar chart and bubble chart displaying each individual's samples. This assignment was done as follows:</p>
+<p align = 'justify'>The task was to retrieve test subject demographics and draw a bar chart and bubble chart displaying each individual's samples. This <a href = 'https://karla-flores.github.io/Interactive-Web-Visualizations--Challenge/'>assignment</a> was done as follows:</p>
 <ul>
   <li>Read in samples.json using the D3 library.</li>
   <li>Retrieve metadata info for each test subject and display this in the form of an unordered list item as a key-value pair on the dashboard.</li>
