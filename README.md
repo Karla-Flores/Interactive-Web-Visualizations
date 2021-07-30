@@ -28,3 +28,10 @@
   <li>Every time an ID is selected from the dropdown (on change), an optionChanged(this.value) function is called, then the information of the ID is updated.</li>
   <p align = 'center'><img src="https://github.com/Karla-Flores/Interactive-Web-Visualizations--Challenge/blob/main/Screenshot/Html.png"></p>
 </ul>
+<br>
+<h3>Source</h3>
+<hr>
+<ul>
+  <li>Hulcr, J. et al.(2012) A Jungle in There: Bacteria in Belly Buttons are Highly Diverse, but Predictable. 24 July 2021. <a href = 'http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/'>http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/</a> </li>
+  <li>Gauge Chart from: <a href='https://plotly.com/javascript/indicator/'>https://plotly.com/javascript/indicator/</a></li>
+</ul>
