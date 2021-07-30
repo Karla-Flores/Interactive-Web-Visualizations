@@ -102,11 +102,8 @@ function build_chart(id) {
             // Creating a trace for buble chart
             var traceBubble = {
                 x: otu_ids,
-                // x: topotu_ids,
                 y: sample_values,
-                // y: topsample_values,
                 text: otu_labels,
-                // text: topotu_id_labels,
                 mode: 'markers',
                 marker: {
                     size: sample_values,
