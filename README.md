@@ -1,7 +1,7 @@
 <h1> Interactive-Web-Visualizations--Challenge </h1>
 <hr>
 <h3>Background</h3>
-<p align = 'justify'>In this assignment, an interactive dashboard was built to explore the Belly Button Biodiversity dataset, which catalogs the microbes that colonize human navels in JSON format.</p>
+<p align = 'justify'>In this assignment, an interactive dashboard was built to explore the <a href = "http://robdunnlab.com/projects/belly-button-biodiversity/" target="_blank">Belly Button Biodiversity dataset</a>, which catalogs the microbes that colonize human navels in JSON format.</p>
 
 <p align = 'justify'>The dataset reveals a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study). Demographics information is dynamically populated based upon a user-selected test subject ID. </p>
 
@@ -12,3 +12,9 @@
 <h3>Plotly</h3>
 <hr>
 <p align = 'justify'>The task was to retrieve test subject demographics and draw a bar chart and bubble chart displaying each individual's samples. This assignment was done as follows:</p>
+<ul>
+  <li>Read in samples.json using the D3 library.</li>
+  <li>Retrieve metadata info for each test subject and display this in the form of an unordered list item as a key-value pair on the dashboard.</li>
+  <li>Get required data for plotting, including sample_values, otu_ids, and otu_labels used to create a trace and plot the bar chart.</li>
+  <li>Since the task was to only plot the top 10 values, the three arrays were sliced and reversed to display the chart as below.</li>
+</ul>
