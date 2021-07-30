@@ -18,7 +18,7 @@
   <p align = 'center'><img src="https://raw.githubusercontent.com/Karla-Flores/Interactive-Web-Visualizations--Challenge/main/Screenshot/Top_10_OTU_ID.png"></p>
   <li>The entire sample arrays were used to plot a bubble chart referring to bacteria cultures per sample.</li>
   <p align = 'center'><img src="https://github.com/Karla-Flores/Interactive-Web-Visualizations--Challenge/blob/main/Screenshot/Bacteria_Cultures_Sample.png"></p>
-  <li>The bonus challenge meant to create a gauge chart and was designed using the documentation as a reference.  A gauge trace was created with wfreq as the value for plotting:</li>
+  <li>The bonus challenge meant to create a gauge chart and was designed using the <a href="https://plotly.com/javascript/indicator/">documentation</a> as a reference.  A gauge trace was created with wfreq as the value for plotting:</li>
   <ul>  
   <li>Any null values were given a value of zero.</li>
   <li>The gauge chart accounts for weekly washing frequency values ranging from 0-9.</li>
@@ -32,6 +32,6 @@
 <h3>Source</h3>
 <hr>
 <ul>
-  <li>Hulcr, J. et al.(2012) A Jungle in There: Bacteria in Belly Buttons are Highly Diverse, but Predictable. 24 July 2021. <a href = 'http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/'>http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/</a> </li>
-  <li>Gauge Chart from: <a href='https://plotly.com/javascript/indicator/'>https://plotly.com/javascript/indicator/</a></li>
+  <li>Hulcr, J. et al.(2012) A Jungle in There: Bacteria in Belly Buttons are Highly Diverse, but Predictable. 24 July 2021. <a href = 'http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/'>http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data</a> </li>
+  <li>Gauge Chart from: <a href='https://plotly.com/javascript/indicator/'>https://plotly.com/javascript/indicator</a></li>
 </ul>
